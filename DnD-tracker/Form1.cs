@@ -45,7 +45,7 @@ namespace DnD_tracker
         private void button1_Click(object sender, EventArgs e)
         {
             label7.ResetText();
-            if (iniBox.Text == " " || chaBox.Text == " " || iniBox.Text == null || chaBox.Text == null)
+            if (iniBox.Text.Length <= 0  || chaBox.Text.Length <= 0 || iniBox.Text == null || chaBox.Text == null)
             {
                 label7.Text = "One or both boxes are empty";
             }
@@ -57,11 +57,6 @@ namespace DnD_tracker
             }
             iniBox.ResetText();
             chaBox.ResetText();
-        }
-
-        public void OrderList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -84,10 +79,12 @@ namespace DnD_tracker
                 stopButton.Show();
                 nextButton.Show();
                 calcButton.Show();
+                durButton.Show();
                 addEffectButton.Show();
 
                 label1.Hide();
                 label2.Hide();
+                label18.Hide();
                 iniBox.Hide();
                 chaBox.Hide();
                 effectBox.Show();
@@ -115,6 +112,10 @@ namespace DnD_tracker
                 label17.Show();
 
                 label5.Text = turnCount.ToString();
+
+                hourBox.Text = "0";
+                minBox.Text = "0";
+                secBox.Text = "0";
 
             }
             catch (Exception)
@@ -214,6 +215,7 @@ namespace DnD_tracker
             nextButton.Hide();
             addEffectButton.Hide();
             calcButton.Hide();
+            durButton.Hide();
             startButton.Show();
             addButton.Show();
             clearButton.Show();
@@ -239,6 +241,7 @@ namespace DnD_tracker
 
             label1.Show();
             label2.Show();
+            label18.Show();
             iniBox.Show();
             chaBox.Show();
             effectBox.Hide();
@@ -258,7 +261,7 @@ namespace DnD_tracker
             try
             {
                 int SelectedIndex = orderList.SelectedIndex;
-                orderList.Items.RemoveAt(orderList.Items.IndexOf(orderList.SelectedIndex));
+                orderList.Items.RemoveAt(orderList.SelectedIndex);
             }
             catch (Exception)
             {
@@ -274,11 +277,6 @@ namespace DnD_tracker
         private void IniBox_Click(object sender, EventArgs e)
         {
             label7.ResetText();
-        }
-
-        private void Label9_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Label8_Click(object sender, EventArgs e)
@@ -302,14 +300,23 @@ namespace DnD_tracker
 
         private void CalcButton_Click(object sender, EventArgs e)
         {
-            totalBox.ResetText();
-            totalBox.Text = (Convert.ToInt32(hourBox.Text) * 360 + Convert.ToInt32(minBox.Text) * 60 + Convert.ToInt32(secBox.Text)).ToString(); ;
+            try
+            {
+                totalBox.Text = (Convert.ToInt32(hourBox.Text) * 360 + Convert.ToInt32(minBox.Text) * 60 + Convert.ToInt32(secBox.Text)).ToString(); ;
 
+                hourBox.Text = "0";
+                minBox.Text = "0";
+                secBox.Text = "0";
+            }
+            catch (Exception)
+            {
 
+            }
+        }
 
-            hourBox.ResetText();
-            minBox.ResetText();
-            secBox.ResetText();
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            durationBox.Text = totalBox.Text;
         }
     }
 

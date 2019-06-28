@@ -65,6 +65,9 @@ namespace DnD_tracker
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.durButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -149,7 +152,6 @@ namespace DnD_tracker
             this.orderList.Name = "orderList";
             this.orderList.Size = new System.Drawing.Size(164, 147);
             this.orderList.TabIndex = 10;
-            this.orderList.SelectedIndexChanged += new System.EventHandler(this.OrderList_SelectedIndexChanged);
             // 
             // clearButton
             // 
@@ -273,7 +275,6 @@ namespace DnD_tracker
             this.label9.TabIndex = 29;
             this.label9.Text = "Encounter has lasted:";
             this.label9.Visible = false;
-            this.label9.Click += new System.EventHandler(this.Label9_Click);
             // 
             // label10
             // 
@@ -395,7 +396,7 @@ namespace DnD_tracker
             this.calcButton.Location = new System.Drawing.Point(27, 450);
             this.calcButton.Margin = new System.Windows.Forms.Padding(2);
             this.calcButton.Name = "calcButton";
-            this.calcButton.Size = new System.Drawing.Size(56, 20);
+            this.calcButton.Size = new System.Drawing.Size(61, 20);
             this.calcButton.TabIndex = 43;
             this.calcButton.Text = "Calculate";
             this.calcButton.UseVisualStyleBackColor = true;
@@ -462,11 +463,48 @@ namespace DnD_tracker
             this.label17.Text = "Total:";
             this.label17.Visible = false;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(272, 38);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(255, 33);
+            this.label18.TabIndex = 49;
+            this.label18.Text = "Encounter Tracker";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(295, 265);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(187, 15);
+            this.label19.TabIndex = 50;
+            this.label19.Text = "Tips: Write Natural 20 as \"Nat 20\"";
+            // 
+            // durButton
+            // 
+            this.durButton.Location = new System.Drawing.Point(107, 450);
+            this.durButton.Margin = new System.Windows.Forms.Padding(2);
+            this.durButton.Name = "durButton";
+            this.durButton.Size = new System.Drawing.Size(61, 20);
+            this.durButton.TabIndex = 51;
+            this.durButton.Text = "Duration";
+            this.durButton.UseVisualStyleBackColor = true;
+            this.durButton.Visible = false;
+            this.durButton.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 481);
+            this.Controls.Add(this.durButton);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -552,6 +590,9 @@ namespace DnD_tracker
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.Button durButton;
     }
 }
 

@@ -8,3 +8,13 @@ C:\Users\Moderator.DESKTOP-QGUCUGO\source\repos\DnD-tracker\DnD-tracker\obj\Debu
 C:\Users\Moderator.DESKTOP-QGUCUGO\source\repos\DnD-tracker\DnD-tracker\obj\Debug\DnD-tracker.exe
 C:\Users\Moderator.DESKTOP-QGUCUGO\source\repos\DnD-tracker\DnD-tracker\obj\Debug\DnD-tracker.pdb
 C:\Users\Moderator.DESKTOP-QGUCUGO\source\repos\DnD-tracker\DnD-tracker\obj\Debug\DnD_tracker.Form1.resources
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\bin\Debug\DnD-tracker.exe.config
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\bin\Debug\DnD-tracker.exe
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\bin\Debug\DnD-tracker.pdb
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.csprojAssemblyReference.cache
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD_tracker.Form1.resources
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD_tracker.Properties.Resources.resources
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.csproj.GenerateResource.cache
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.csproj.CoreCompileInputs.cache
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.exe
+C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.pdb
