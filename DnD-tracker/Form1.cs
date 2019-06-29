@@ -27,13 +27,17 @@ namespace DnD_tracker
         public int turnCount = 1;
         public int listCount = 0;
         public int encounterTime = 0;
-        public int i = 0;
+        public int i,j = 0;
+
+        Form2 newForm = null;
 
         public Form1()
         {
             InitializeComponent();
             orderList.Sorted = true;
+            newForm = new Form2();
         }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -51,12 +55,84 @@ namespace DnD_tracker
             }
             else
             {
-                string init = iniBox.Text;
+                orderList.Items.Add(iniBox.Text + "          " + chaBox.Text);
+                newForm.chaList.Items.Add(chaBox.Text);
+                newForm.maxHpList.Items.Add(hpBox.Text);
+                newForm.hpLeftList.Items.Add(hpBox.Text);
 
-                orderList.Items.Add(init + "          " + chaBox.Text);
+                ComboBox comboBox = new ComboBox();
+                comboBox.Location = new Point(210, 38 + j * 21);
+                comboBox.Size = new Size(121, 21);
+                comboBox.Items.Add(" ");
+                comboBox.Items.Add("Blinded");
+                comboBox.Items.Add("Charmed");
+                comboBox.Items.Add("Deafened");
+                comboBox.Items.Add("Fatigued");
+                comboBox.Items.Add("Frightened");
+                comboBox.Items.Add("Grappled");
+                comboBox.Items.Add("Incapacitated");
+                comboBox.Items.Add("Invisible");
+                comboBox.Items.Add("Paralysed");
+                comboBox.Items.Add("Petrified");
+                comboBox.Items.Add("Prone");
+                comboBox.Items.Add("Restrained");
+                comboBox.Items.Add("Stunned");
+                comboBox.Items.Add("Unconcious");
+                comboBox.Items.Add("Exhausted");
+                comboBox.Items.Add("Dead");
+
+                CheckBox deadCheck1 = new CheckBox();
+                deadCheck1.Location = new Point(350, 39 + j * 15);
+                deadCheck1.Size = new Size(15, 15);
+
+                CheckBox deadCheck2 = new CheckBox();
+                deadCheck2.Location = new Point(365, 39 + j * 15);
+                deadCheck2.Size = new Size(15, 15);
+
+                CheckBox deadCheck3 = new CheckBox();
+                deadCheck3.Location = new Point(380, 39 + j * 15);
+                deadCheck3.Size = new Size(15, 15);
+
+                CheckBox deadCheck4 = new CheckBox();
+                deadCheck4.Location = new Point(415, 39 + j * 15);
+                deadCheck4.Size = new Size(15, 15);
+
+                CheckBox deadCheck5 = new CheckBox();
+                deadCheck5.Location = new Point(430, 39 + j * 15);
+                deadCheck5.Size = new Size(15, 15);
+
+                CheckBox deadCheck6 = new CheckBox();
+                deadCheck6.Location = new Point(445, 39 + j * 15);
+                deadCheck6.Size = new Size(15, 15);
+
+                Label hpLabel = new Label();
+                hpLabel.Name = ("hpLabel" + j).ToString();
+                hpLabel.Location = new Point(480, 39 + j * 15);
+                hpLabel.Size = new Size(44, 15);
+                hpLabel.Text = hpBox.Text + "/" + hpBox.Text;
+
+                ProgressBar hpProgress = new ProgressBar();
+                hpProgress.Name = ("hpProgress" + j).ToString();
+                hpProgress.Location = new Point(525, 39 + j * 15);
+                hpProgress.Size = new Size(97, 15);
+                hpProgress.Minimum = 0;
+                hpProgress.Maximum = Convert.ToInt32(hpBox.Text);
+                hpProgress.Value = Convert.ToInt32(hpBox.Text);
+
+                newForm.Controls.Add(hpLabel);
+                newForm.Controls.Add(hpProgress);
+                newForm.Controls.Add(deadCheck6);
+                newForm.Controls.Add(deadCheck5);
+                newForm.Controls.Add(deadCheck4);
+                newForm.Controls.Add(deadCheck3);
+                newForm.Controls.Add(deadCheck2);
+                newForm.Controls.Add(deadCheck1);
+                newForm.Controls.Add(comboBox);
             }
+            j++;
             iniBox.ResetText();
             chaBox.ResetText();
+            hpBox.ResetText();
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -85,8 +161,10 @@ namespace DnD_tracker
                 label1.Hide();
                 label2.Hide();
                 label18.Hide();
+                maxHpLabel.Hide();
                 iniBox.Hide();
                 chaBox.Hide();
+                hpBox.Hide();
                 effectBox.Show();
                 durationBox.Show();
                 hourBox.Show();
@@ -116,7 +194,10 @@ namespace DnD_tracker
                 hourBox.Text = "0";
                 minBox.Text = "0";
                 secBox.Text = "0";
-
+                if(newForm.Visible == true)
+                    newForm = new Form2();
+                else
+                    newForm.Show();
             }
             catch (Exception)
             {
@@ -143,6 +224,9 @@ namespace DnD_tracker
         private void Button3_Click(object sender, EventArgs e)
         {
             orderList.Items.Clear();
+            newForm.chaList.Items.Clear();
+            newForm.maxHpList.Items.Clear();
+            newForm.hpLeftList.Items.Clear();
             label7.ResetText();
             encounterTime = 0;
         }
@@ -242,8 +326,10 @@ namespace DnD_tracker
             label1.Show();
             label2.Show();
             label18.Show();
+            maxHpLabel.Show();
             iniBox.Show();
             chaBox.Show();
+            hpBox.Show();
             effectBox.Hide();
             durationBox.Hide();
             hourBox.Hide();
@@ -309,6 +395,29 @@ namespace DnD_tracker
                 secBox.Text = "0";
             }
             catch (Exception)
+            {
+
+            }
+        }
+
+        private void Button1_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                if (newForm.IsDisposed)
+                    newForm = new Form2();
+                if (newForm.Visible == true)
+                {
+                    newForm.Hide();
+                    showButton.Text = "Show";
+                }
+                else
+                {
+                    newForm.Show();
+                    showButton.Text = "Hide";
+                }
+            }
+            catch
             {
 
             }

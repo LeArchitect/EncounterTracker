@@ -18,3 +18,4 @@ C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj
 C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.csproj.CoreCompileInputs.cache
 C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.exe
 C:\Users\Moderator.DESKTOP-QGUCUGO\Source\Repos\EncounterTracker\DnD-tracker\obj\Debug\DnD-tracker.pdb
+C:\Users\Moderator.DESKTOP-QGUCUGO\source\repos\EncounterTracker\DnD-tracker\obj\Debug\DnD_tracker.Form2.resources

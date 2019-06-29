@@ -68,6 +68,9 @@ namespace DnD_tracker
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.durButton = new System.Windows.Forms.Button();
+            this.hpBox = new System.Windows.Forms.TextBox();
+            this.maxHpLabel = new System.Windows.Forms.Label();
+            this.showButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -106,7 +109,7 @@ namespace DnD_tracker
             // 
             // chaBox
             // 
-            this.chaBox.Location = new System.Drawing.Point(242, 356);
+            this.chaBox.Location = new System.Drawing.Point(218, 356);
             this.chaBox.Name = "chaBox";
             this.chaBox.Size = new System.Drawing.Size(100, 20);
             this.chaBox.TabIndex = 6;
@@ -115,7 +118,7 @@ namespace DnD_tracker
             // 
             // iniBox
             // 
-            this.iniBox.Location = new System.Drawing.Point(430, 356);
+            this.iniBox.Location = new System.Drawing.Point(472, 356);
             this.iniBox.Name = "iniBox";
             this.iniBox.Size = new System.Drawing.Size(100, 20);
             this.iniBox.TabIndex = 7;
@@ -126,7 +129,7 @@ namespace DnD_tracker
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(257, 323);
+            this.label1.Location = new System.Drawing.Point(233, 323);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 18);
@@ -138,7 +141,7 @@ namespace DnD_tracker
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(451, 323);
+            this.label2.Location = new System.Drawing.Point(493, 323);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 18);
@@ -269,7 +272,7 @@ namespace DnD_tracker
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(617, 233);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(151, 18);
             this.label9.TabIndex = 29;
@@ -311,7 +314,7 @@ namespace DnD_tracker
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(451, 323);
+            this.label11.Location = new System.Drawing.Point(443, 323);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 18);
@@ -323,7 +326,7 @@ namespace DnD_tracker
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(267, 323);
+            this.label12.Location = new System.Drawing.Point(275, 323);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 18);
@@ -333,7 +336,7 @@ namespace DnD_tracker
             // 
             // durationBox
             // 
-            this.durationBox.Location = new System.Drawing.Point(430, 356);
+            this.durationBox.Location = new System.Drawing.Point(427, 356);
             this.durationBox.Name = "durationBox";
             this.durationBox.Size = new System.Drawing.Size(100, 20);
             this.durationBox.TabIndex = 37;
@@ -341,7 +344,7 @@ namespace DnD_tracker
             // 
             // effectBox
             // 
-            this.effectBox.Location = new System.Drawing.Point(242, 356);
+            this.effectBox.Location = new System.Drawing.Point(257, 356);
             this.effectBox.Name = "effectBox";
             this.effectBox.Size = new System.Drawing.Size(100, 20);
             this.effectBox.TabIndex = 36;
@@ -497,11 +500,43 @@ namespace DnD_tracker
             this.durButton.Visible = false;
             this.durButton.Click += new System.EventHandler(this.Button1_Click_1);
             // 
+            // hpBox
+            // 
+            this.hpBox.Location = new System.Drawing.Point(347, 356);
+            this.hpBox.Name = "hpBox";
+            this.hpBox.Size = new System.Drawing.Size(100, 20);
+            this.hpBox.TabIndex = 52;
+            // 
+            // maxHpLabel
+            // 
+            this.maxHpLabel.AutoSize = true;
+            this.maxHpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxHpLabel.Location = new System.Drawing.Point(369, 323);
+            this.maxHpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maxHpLabel.Name = "maxHpLabel";
+            this.maxHpLabel.Size = new System.Drawing.Size(57, 18);
+            this.maxHpLabel.TabIndex = 53;
+            this.maxHpLabel.Text = "MaxHP";
+            // 
+            // showButton
+            // 
+            this.showButton.Location = new System.Drawing.Point(770, 11);
+            this.showButton.Margin = new System.Windows.Forms.Padding(2);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(46, 21);
+            this.showButton.TabIndex = 54;
+            this.showButton.Text = "Show";
+            this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.Button1_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 481);
+            this.Controls.Add(this.showButton);
+            this.Controls.Add(this.maxHpLabel);
+            this.Controls.Add(this.hpBox);
             this.Controls.Add(this.durButton);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -593,6 +628,9 @@ namespace DnD_tracker
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.Button durButton;
+        public System.Windows.Forms.TextBox hpBox;
+        public System.Windows.Forms.Label maxHpLabel;
+        public System.Windows.Forms.Button showButton;
     }
 }
 
