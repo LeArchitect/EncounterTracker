@@ -49,7 +49,7 @@ namespace DnD_tracker
         private void button1_Click(object sender, EventArgs e)
         {
             label7.ResetText();
-            if (iniBox.Text.Length <= 0  || chaBox.Text.Length <= 0 || iniBox.Text == null || chaBox.Text == null)
+            if (iniBox.Text.Length <= 0  || chaBox.Text.Length <= 0 || hpBox.Text.Length <= 0 || iniBox.Text == null || chaBox.Text == null || hpBox.Text == null)
             {
                 label7.Text = "One or both boxes are empty";
             }
